@@ -1,19 +1,14 @@
-
+import html from '../helper-utilities/html.js';
 
 function makeMeal(meals) {
-    const html = /*html*/`
+    return html `
         <li class="meals">
            <h3 class="name">${meals.name}</h3>
            <p>${meals.description}</p>
            <p>$${meals.cost}</p>
            <img src="assets/meal-list/${meals.id}.jpg">
         </li>
-`;
-    const template = document.createElement('template');
-
-    template.innerHTML = html;
-
-    return template.content;
+    `;
 }
 
 

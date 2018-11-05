@@ -18,6 +18,9 @@ const list = document.getElementById('cart-list');
 
 const shoppingCart = {
     init(cart) {
+
+        // LET TOTAL = 0? TODO: ORDER TOTAL HERE?
+        
         for(let i = 0; i < cart.length; i++) {
             const dom = makeItem(cart[i]);
             dom.getElementById('add').addEventListener('click', function() {
