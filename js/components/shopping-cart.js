@@ -20,8 +20,13 @@ const shoppingCart = {
     init(cart) {
 
         // LET TOTAL = 0? TODO: ORDER TOTAL HERE?
-        
+        let total = 0;
+
         for(let i = 0; i < cart.length; i++) {
+            const item = cart[i];
+
+            total += item.quantity * item.cost;
+
             const dom = makeItem(cart[i]);
             dom.getElementById('add').addEventListener('click', function() {
                 cartApi.add(cart[i]);
@@ -33,6 +38,9 @@ const shoppingCart = {
             });
             list.appendChild(dom);
         }
+        const orderTotal = document.createElement('li');
+        orderTotal.textContent = `Order Total $${total.toFixed(2)}`;
+        list.appendChild(orderTotal);
     },
     update(cart) {
         while(list.lastElementChild) {
