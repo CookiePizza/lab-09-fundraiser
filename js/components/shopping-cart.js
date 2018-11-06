@@ -19,7 +19,6 @@ const list = document.getElementById('cart-list');
 const shoppingCart = {
     init(cart) {
 
-        // LET TOTAL = 0? TODO: ORDER TOTAL HERE?
         let total = 0;
 
         for(let i = 0; i < cart.length; i++) {

@@ -1,9 +1,11 @@
-import orderList from './components/order-list.js';
 import ordersApi from './data-apis/orders-api.js';
+import orderList from './components/order-list.js';
 import orderDetail from './components/order-detail.js';
 
-const order = ordersApi.getAll();
+const orders = ordersApi.getAll();
 
-orderList.init(order, function(order) {
+orderList.init(orders, function(order) {
     orderDetail.update(order);
+    console.log(order);
 });
+
