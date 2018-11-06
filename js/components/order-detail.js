@@ -1,9 +1,6 @@
 const section = document.getElementById('order-detail');
 
-const orderDetail = {
-    // init() {
-    //     orderDetail.order = 'this is a test';
-    // },
+const orderDetail = {        
     update(order) {
         orderDetail.order = order;
         section.querySelector('h2').textContent = customer.name;

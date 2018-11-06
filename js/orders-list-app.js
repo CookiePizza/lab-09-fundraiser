@@ -9,3 +9,7 @@ orderList.init(orders, function(order) {
     console.log(order);
 });
 
+addOrder.init(function(order){
+    ordersApi.add(order);
+});
+
