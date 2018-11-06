@@ -15,5 +15,6 @@ checkbox.addEventListener('click', function() {
     if(checkbox.checked) {
         billAddress.value = shipAddress.value;
     }
+    else billAddress.value = '';
 });
 
